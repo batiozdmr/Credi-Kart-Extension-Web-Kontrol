@@ -96,3 +96,15 @@ def cardAdd(request):
 
 def userData(request):
     return render(request, "apps/api/user_index_api.html")
+
+
+def cardDelete(request):
+    statu = "False"
+    id = request.GET.get('id')
+    card = Card.objects.filter(id=id).delete()
+    if card:
+        statu = "True"
+    context = {
+        'data': statu,
+    }
+    return render(request, "apps/api/data.html")

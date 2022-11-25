@@ -12,4 +12,5 @@ urlpatterns = [
     path('card-detail/', cardDetail, name='cardDetail'),
     path('card-update/', cardUpdate, name='cardUpdate'),
     path('card-add/', cardAdd, name='cardAdd'),
+    path('card-delete/', cardDelete, name='cardDelete'),
 ]
