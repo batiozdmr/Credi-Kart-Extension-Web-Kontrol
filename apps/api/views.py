@@ -38,7 +38,7 @@ def login_control_login(request):
     return render(request, "apps/api/data.html", context)
 
 
-def productData(request):
+def cardData(request):
     card_list = Card.objects.filter()
     context = {
         'card_list': card_list,

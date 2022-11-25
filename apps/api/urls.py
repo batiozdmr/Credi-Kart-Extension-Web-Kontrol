@@ -7,6 +7,6 @@ app_name = "api"
 urlpatterns = [
     path('login_control/', login_control, name='login_control'),
     path('login_control_login/', login_control_login, name='login_control_login'),
-    path('CardData/', productData, name='productData'),
+    path('cardData/', cardData, name='cardData'),
     path('userData/', userData, name='userData'),
 ]
