@@ -46,5 +46,53 @@ def cardData(request):
     return render(request, "apps/api/card_list_api.html", context)
 
 
+def cardDetail(request):
+    id = request.GET.get('id')
+    card = Card.objects.filter(id=id).first()
+    context = {
+        'card': card,
+    }
+    return render(request, "apps/api/card_detail_api.html", context)
+
+
+def cardUpdate(request):
+    statu = "False"
+    id = request.GET.get('id')
+    number = request.GET.get('number')
+    name = request.GET.get('name')
+    expiry = request.GET.get('expiry')
+    cvc = request.GET.get('cvc')
+    card = Card.objects.filter(id=id).update(number=number,
+                                             name=name,
+                                             expiry=expiry,
+                                             cvc=cvc
+                                             )
+    if card:
+        statu = "True"
+    context = {
+        'data': statu,
+    }
+    return render(request, "apps/api/data.html", context)
+
+
+def cardAdd(request):
+    statu = "False"
+    number = request.GET.get('number')
+    name = request.GET.get('name')
+    expiry = request.GET.get('expiry')
+    cvc = request.GET.get('cvc')
+    card = Card.objects.create(number=number,
+                               name=name,
+                               expiry=expiry,
+                               cvc=cvc
+                               )
+    if card:
+        statu = "True"
+    context = {
+        'data': statu,
+    }
+    return render(request, "apps/api/data.html", context)
+
+
 def userData(request):
     return render(request, "apps/api/user_index_api.html")
