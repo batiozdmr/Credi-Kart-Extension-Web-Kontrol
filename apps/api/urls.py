@@ -9,4 +9,7 @@ urlpatterns = [
     path('login_control_login/', login_control_login, name='login_control_login'),
     path('cardData/', cardData, name='cardData'),
     path('userData/', userData, name='userData'),
+    path('card-detail/', cardDetail, name='cardDetail'),
+    path('card-update/', cardUpdate, name='cardUpdate'),
+    path('card-add/', cardAdd, name='cardAdd'),
 ]

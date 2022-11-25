@@ -1,0 +1,43 @@
+<div class="mt-3">
+    <div class="col-lg-12">
+        <input type="hidden" name="id" value="{{ card.id }}">
+        <div class="card">
+            <div class="card-header">
+                <div class="card-title">Kart Düzenle</div>
+            </div>
+            <div class="card-body">
+                <div class="row mb-4">
+                    <label class="col-md-3 form-label">Kart Numarası :</label>
+                    <div class="col-md-9">
+                        <input type="number" name="number" id="number_id" class="form-control" placeholder="Kart Numarası"
+                               value="{{ card.number }}">
+                    </div>
+                </div>
+
+                <div class="row mb-4">
+                    <label class="col-md-3 form-label">Kart Sahibi :</label>
+                    <div class="col-md-9">
+                        <input type="text" name="name" id="name_id" class="form-control" placeholder="Ad Soyad"
+                               value="{{ card.name }}">
+                    </div>
+                </div>
+
+                <div class="row mb-4">
+                    <label class="col-md-3 form-label">SKT :</label>
+                    <div class="col-md-9">
+                        <input type="text" name="expiry" id="expiry_id" class="form-control"
+                               placeholder="SKT" value="{{ card.expiry }}">
+                    </div>
+                </div>
+
+                <div class="row mb-4">
+                    <label class="col-md-3 form-label">CVC :</label>
+                    <div class="col-md-9">
+                        <input type="number" name="cvc" id="cvc_id" class="form-control" placeholder="CVC"
+                               value="{{ card.cvc }}">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
