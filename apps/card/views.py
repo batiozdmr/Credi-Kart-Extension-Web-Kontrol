@@ -4,8 +4,7 @@ from apps.card.models import *
 
 
 def cards_api(request):
-    user_id = request.POST.get('user_id')
-    cards = Card.objects.filter(user_id=user_id)
+    cards = Card.objects.filter()
     context = {
         'cards': cards,
     }
